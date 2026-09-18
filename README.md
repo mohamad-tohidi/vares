@@ -21,7 +21,7 @@ you serve your app that uses an llm, normally.
 
 either way, `Echo` forwards every request through untouched, and mirrors the input + output on the side.
 
-`Apprentice` listens to `Echo`. it consumes the mirrored data, batches it, and trains the student for one step.
+`Intern` listens to `Echo`. it consumes the mirrored data, batches it, and trains the student for one step.
 
 the student is checked and saved as it improves — you'll always have a checkpoint on disk or S3, ready to use.
 

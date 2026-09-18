@@ -6,11 +6,11 @@ It forwards every request untouched, and writes the input + output to a log on t
 ```
 your app ──▶ Echo ──▶ your model
               │
-              └──▶ records.jsonl ──▶ Apprentice pulls over HTTP
+              └──▶ records.jsonl ──▶ Intern pulls over HTTP
 ```
 
 Echo records. It does not interpret. Conversation reconstruction, dedup and sampling all
-live in `Apprentice`.
+live in `Intern`.
 
 ## Run it
 
@@ -71,7 +71,7 @@ Ack after you've stored a record, not when you receive it. One consumer only.
 ```
 
 Bodies are as they appeared on the wire; streamed responses are reassembled into the
-non-streaming shape. The hashes let `Apprentice` link a request to the one it extends.
+non-streaming shape. The hashes let `Intern` link a request to the one it extends.
 
 ## Configure
 

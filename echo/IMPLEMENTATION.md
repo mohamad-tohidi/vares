@@ -71,7 +71,7 @@ still forwarded upstream. Never log them, not even redacted by prefix.
 ## Conversation hashes
 
 Later requests usually contain earlier ones as a prefix. Echo does not dedup; it only emits
-hashes so `Apprentice` can rebuild the tree cheaply.
+hashes so `Intern` can rebuild the tree cheaply.
 
 ```
 h₀ = H(canon(msg₀))
@@ -83,6 +83,6 @@ Record `B` extends record `A` when `A.chain_hash ∈ B.prefix_hashes`.
 Exclude volatile system-prompt content (timestamps, injected RAG context) from the chain, or
 every conversation fragments into orphan roots.
 
-Downstream, `Apprentice` trains one sample per leaf with loss masked to assistant spans, and
+Downstream, `Intern` trains one sample per leaf with loss masked to assistant spans, and
 puts loss only on assistant messages Echo actually witnessed — history is client-supplied
 and may have been edited.
