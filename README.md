@@ -12,8 +12,12 @@ currently supports SFT distillation. [more on other methods](https://youtu.be/Ys
 
 you serve your app that uses an llm, normally.
 
-**self-hosted?** put `Echo` in front of your model's api.
-**using a provider?** point your app at `Echo` instead of the provider directly.
+     ------ 
+**self-hosted?** -> put `Echo` in front of your model's api.
+
+**using a provider?** -> point your app at `Echo` instead of the provider directly.
+
+     ------
 
 either way, `Echo` forwards every request through untouched, and mirrors the input + output on the side.
 
