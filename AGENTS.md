@@ -25,8 +25,9 @@ When in doubt: ship the smallest change that works today, not the design that wo
 
 ## Verify
 
-- This repo is docs-only: no build, lint, or test commands yet.
-- If you add code, add its build/run command here.
+- Build/test echo: `cd echo && go test ./... && go build ./cmd/echo`
+- Build/test intern: `cd intern && uv sync --dev && uv run pytest`
+- Run intern: `cd intern && uv run python -m intern` (needs `INTERN_ECHO_URL`, `INTERN_ECHO_TOKEN`, `INTERN_MODEL`)
 
 
 ## echo
