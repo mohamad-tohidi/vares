@@ -27,3 +27,12 @@ When in doubt: ship the smallest change that works today, not the design that wo
 
 - This repo is docs-only: no build, lint, or test commands yet.
 - If you add code, add its build/run command here.
+
+
+## echo
+its stack is golang. it remains as a simple transparent proxy, that echo's the data to intern.
+
+
+## intern
+
+the trainer, that pulls data from echo. written in python and hugginface libraries, like datasets, TRL, transformers.
